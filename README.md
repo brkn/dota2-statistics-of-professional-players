@@ -4,7 +4,7 @@ Changelog:
 =========
 -09.41 Sun: Created second sheet, formulated some data. Done with ODS part until it turns out "nah it's not done".
 -17.15 Sun: Python cant handle Chinese players' names. Google translated them one by one to latin. Changed encoding to ANSII. Created new .ods file.
-
+-02,25 Mon: "Is that a huge banner or are you just happy to see me?". Python is almost done. Added old css file with little changes. 
 
 To Do List
 =========
@@ -21,8 +21,12 @@ To Do List
   - 
   
 - **HTML**
+  - Create a division for table with horizontal and vertical scrolling
+  - Add js code for sorting at top
   - CSS and other meaningless things
+    - Done
   - Where did i get data, subset query (7.00 and after any event etc)
+    - Done
   - Apples and oranges part
   - "In particular, write about what questions about the data itself your brief investigation may have answered. For
 example, if your dataset was about temperatures in India for the last 100 years, has India warmed a lot since the
