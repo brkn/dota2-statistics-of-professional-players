@@ -3,16 +3,16 @@ Statistics Of Professional Dota2 Players
 Changelog:
 =========
 -09.41 Sun: Created second sheet, formulated some data. Done with ODS part until it turns out "nah it's not done".
-
+-17.15 Sun: Python cant handle Chinese players' names. Google translated them one by one to latin. Changed encoding to ANSII. Created new .ods file.
 
 
 To Do List
 =========
-- **Ods**:
+- **ODS**:
   - "exploratory data analysis"
-    -Done: Averages, median player. 
+    - Done: Averages, median player. 
   - "Also, try sorting, filtering, making charts and formatting the spreadsheet for readability"
-    -Done: sorting and more difficult functions.
+    - Done: sorting and more difficult functions.
   
 - **Python**
   - "Edit so that it produces valid HTML 5 as output"
