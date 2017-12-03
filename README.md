@@ -27,6 +27,8 @@ example, if your dataset was about temperatures in India for the last 100 years,
 ------
 After the Deadline To Do (Probably not gonna happen)
 =========
+- CV :
+  - Average face of a professioanl dota2 player
 - Scrape the data autamatically from datdota
 - Scrape team lineups from liqupedia
 - Scrape standings and match lineups before the match from SOMEWHERE IDK
