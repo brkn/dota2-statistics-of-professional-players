@@ -4,9 +4,9 @@ Changelog:
 =========
 - 09.41 Sun: Created second sheet, formulated some data. Done with ODS part until it turns out "nah it's not done".
 - 17.15 Sun: Python cant handle Chinese players' names. Google translated them one by one to latin. Changed encoding to ANSII. Created new .ods file.
-- 02,25 Mon: "Is that a huge banner or are you just happy to see me?". Python is almost done. Added old css file with little changes. 
-- 04,25 Mon: Style of data table. Sorting script from internet. Moved webpage files to one folder. 
-
+- 02.25 Mon: "Is that a huge banner or are you just happy to see me?". Python is almost done. Added old css file with little changes. 
+- 04.25 Mon: Style of data table. Sorting script from internet. Moved webpage files to one folder. 
+- 07.50 Mon: Fixed python error. Calc'd the average stats, Calc'd who is the median. Wasted hours on converting winrate to a readable percentage format cell.
 
 To Do List
 =========
@@ -46,6 +46,8 @@ example, if your dataset was about temperatures in India for the last 100 years,
 ------
 After the Deadline To Do (Probably not gonna happen)
 =========
+- Google API:
+  - Get the picture of calculated player from google images.
 - CV :
   - Average face of a professioanl dota2 player
 - Scrape the data autamatically from datdota

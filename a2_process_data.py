@@ -22,7 +22,6 @@ with open("a2_input.csv") as input_file:
 tableheads = "\n\t\t\t\t\t"
 for i in range(len(contents[0])):
 	tableheads = tableheads + "<th>" +contents[0][i] + "</th>" + "\n\t\t\t\t\t"
-	##tableheads.append( "<th>" + contents[0][i] + "</th>" + "\n")
 tableheads = tableheads[:tableheads.rfind('\t')]
 
 tabledata = "\n\t\t\t\t"
@@ -35,6 +34,44 @@ for row in contents:
 	for cell in row:
 		tabledata = tabledata + "\n\t\t\t\t\t" + "<td>" + cell + "</td>"
 	tabledata = tabledata + "\n\t\t\t\t" + "</tr>" + "\n\t\t\t\t"
+
+processeddata = []
+with open("a2_processing.csv") as procfile:
+    for row in csv.reader(procfile):
+        processeddata = processeddata + [row]
+
+avdata = "\n\t\t\t\t<tr>"
+flag1 = True
+for row in processeddata:
+	if(flag1):
+		flag1 = False
+		continue
+	flag = 2
+	for cell in row:
+		flag = flag + 1
+		if(flag==7):
+			avdata = avdata + "\n\t\t\t\t\t" + "<td>" + str("{0:.2f}".format( float(cell.replace(',','.') ) * 100) ) + "%" + "</td>"
+			continue
+		avdata = avdata + "\n\t\t\t\t\t" + "<td>" + cell + "</td>"
+	break
+avdata = avdata + "\n\t\t\t\t<tr>"
+
+meddata = "\n\t\t\t\t<tr>"
+flag = -1
+for row in processeddata:
+	flag = flag + 1
+	if(flag < 2):
+		continue
+	for cell in row:
+		flag = flag + 1
+		if(flag==7):
+			meddata = meddata + "\n\t\t\t\t\t" + "<td>" + str("{0:.2f}".format( float(cell.replace(',','.') ) * 100) ) + "%" + "</td>"
+			continue
+		meddata = meddata + "\n\t\t\t\t\t" + "<td>" + cell + "</td>"
+	break
+meddata = meddata + "\n\t\t\t\t<tr>"
+
+
 
 def htmlpage():
     htmltext = """
@@ -66,10 +103,29 @@ def htmlpage():
 	<section class="c2">
 		<h2>The Data: </h2>
 		<div class="grid">
-			<table>
+			<table class="sortable">
 				<tr>"""+tableheads+"""</tr>"""+tabledata+"""	
-		</table>
-	</div>		
+			</table>
+		</div>	
+	</section>
+	<section class="splitted">
+		<div class="left">
+			<h3>Average Stats</h3>
+			<table class="grid">
+				<tr>"""+tableheads+"""</tr>"""+avdata+"""	
+			</table>
+		</div>
+		<div class="right">
+			<h3>Median Player</h3>
+			<table class="grid">
+				<tr>"""+tableheads+"""</tr>"""+meddata+"""	
+			</table>
+		</div>
+		
+	</section>
+	<section class="content">
+		<h2>Apples and Oranges</h2>
+	</section>	
 </body>
 </html>
 """
