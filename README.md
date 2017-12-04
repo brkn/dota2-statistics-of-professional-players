@@ -2,9 +2,11 @@ Statistics Of Professional Dota2 Players
 ========================
 Changelog:
 =========
--09.41 Sun: Created second sheet, formulated some data. Done with ODS part until it turns out "nah it's not done".
--17.15 Sun: Python cant handle Chinese players' names. Google translated them one by one to latin. Changed encoding to ANSII. Created new .ods file.
--02,25 Mon: "Is that a huge banner or are you just happy to see me?". Python is almost done. Added old css file with little changes. 
+- 09.41 Sun: Created second sheet, formulated some data. Done with ODS part until it turns out "nah it's not done".
+- 17.15 Sun: Python cant handle Chinese players' names. Google translated them one by one to latin. Changed encoding to ANSII. Created new .ods file.
+- 02,25 Mon: "Is that a huge banner or are you just happy to see me?". Python is almost done. Added old css file with little changes. 
+- 04,25 Mon: Style of data table. Sorting script from internet. Moved webpage files to one folder. 
+
 
 To Do List
 =========
@@ -16,13 +18,17 @@ To Do List
   
 - **Python**
   - "Edit so that it produces valid HTML 5 as output"
+    - Done. Need to test one more time.
   - "Output the whole input CSV as HTML",  "present the data in a grid"
+    - Damn.
   - "the summary statistics and a brief (1-2 paragraphs) report about this investigation"
   - 
   
 - **HTML**
   - Create a division for table with horizontal and vertical scrolling
+    - Done.
   - Add js code for sorting at top
+    - Down.
   - CSS and other meaningless things
     - Done
   - Where did i get data, subset query (7.00 and after any event etc)
