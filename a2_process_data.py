@@ -34,6 +34,10 @@ for row in contents:
 	for cell in row:
 		tabledata = tabledata + "\n\t\t\t\t\t" + "<td>" + cell + "</td>"
 	tabledata = tabledata + "\n\t\t\t\t" + "</tr>" + "\n\t\t\t\t"
+tabledata = tabledata[:tabledata.rfind("<tr>")]
+
+tabledata = tabledata + "</tr>"
+tabledata = tabledata[:tabledata.rfind("</tr>")]
 
 processeddata = []
 with open("a2_processing.csv") as procfile:
@@ -54,7 +58,7 @@ for row in processeddata:
 			continue
 		avdata = avdata + "\n\t\t\t\t\t" + "<td>" + cell + "</td>"
 	break
-avdata = avdata + "\n\t\t\t\t<tr>"
+avdata = avdata + "\n\t\t\t\t</tr>"
 
 meddata = "\n\t\t\t\t<tr>"
 flag = -1
@@ -69,7 +73,7 @@ for row in processeddata:
 			continue
 		meddata = meddata + "\n\t\t\t\t\t" + "<td>" + cell + "</td>"
 	break
-meddata = meddata + "\n\t\t\t\t<tr>"
+meddata = meddata + "\n\t\t\t\t</tr>"
 
 
 
@@ -93,12 +97,12 @@ def htmlpage():
 	<section class="content">
 		<h2>Statistics Of Professional Dota2 Players</h2>
 		<p>Let's analyse the statistics of Dota2 player's official matches. The data got collected from <a href="https://www.datdota.com/" target="_blank">datdota</a>. To make the data recent and relevant following criterias are used.
+		</p>
 		<ul>
 			<li>Patch 7.00 and after</li>
 			<li>Players with minimum 35 matches</li>
 			<li>Professional or premium matches(aka matches that actually matters)</li>
 		</ul>
-		</p>
 	</section>
 	<section class="c2">
 		<h2>The Data: </h2>

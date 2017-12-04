@@ -57,6 +57,5 @@ After the Deadline To Do (Probably not gonna happen)
 - Try using Machine Learning algorithms and compare results to predictions
 - Perfect the model
 - Automate the site
-- Put a paywall behind the content
 - ???
-- Profit.
+
