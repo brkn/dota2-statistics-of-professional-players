@@ -7,6 +7,8 @@ Changelog:
 - 02.25 Mon: "Is that a huge banner or are you just happy to see me?". Python is almost done. Added old css file with little changes. 
 - 04.25 Mon: Style of data table. Sorting script from internet. Moved webpage files to one folder. 
 - 07.50 Mon: Fixed python error. Calc'd the average stats, Calc'd who is the median. Wasted hours on converting winrate to a readable percentage format cell.
+- 08.20 Mon: Fixed loops creating extra lines etc.
+- 09.06 Mon: Added a small investigation part.
 
 To Do List
 =========
